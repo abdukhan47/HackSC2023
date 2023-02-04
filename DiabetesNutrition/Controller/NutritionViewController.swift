@@ -8,11 +8,23 @@
 import UIKit
 import Charts
 
+
 class NutritionViewController: UIViewController {
     
+    
+    @IBOutlet weak var lblFoodName : UILabel!
+    
+    func showFoodDetails(_ food: Food)
+    {
+        lblFoodName.text = food.name;
+    }
+    var targetFood = Food(name: "Potato",
+                          cal: 30.0,
+                          nDict: ["Protein": 1.0, "Fat":2.0])
+    showFoodDetails(food: self.targetFood)
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -29,16 +41,7 @@ class NutritionViewController: UIViewController {
     */
 
 }
-/*
 
-struct BarChart: View
-{
-    var body: some View
-    {
-        Chart
-        {
-            
-        }
-    }
-}
-*/
+
+
+

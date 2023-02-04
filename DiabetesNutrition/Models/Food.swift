@@ -9,11 +9,12 @@ import Foundation
 
 class Food
 {
-    var name: String
-    var cal: Double
+    var name: String = ""
+    var cal: Double = 0
     var nDict : [String: Double] = [:]
-    var foodGroups : [String] = []
-    init(name: String, cal: Double)
+    //var foodGroups : [String] = []
+    
+    init(name: String, cal: Double, nDict : [String: Double])
     {
         self.name = name
         self.cal = cal
