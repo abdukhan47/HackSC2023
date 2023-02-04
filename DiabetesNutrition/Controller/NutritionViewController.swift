@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import Charts
 
 class NutritionViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
@@ -27,3 +29,16 @@ class NutritionViewController: UIViewController {
     */
 
 }
+/*
+
+struct BarChart: View
+{
+    var body: some View
+    {
+        Chart
+        {
+            
+        }
+    }
+}
+*/

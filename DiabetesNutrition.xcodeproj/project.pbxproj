@@ -22,6 +22,8 @@
 		26C1B0D9298E397B00142F21 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B0D8298E397B00142F21 /* LoginViewController.swift */; };
 		26C1B0DB298E398F00142F21 /* FoodScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B0DA298E398F00142F21 /* FoodScannerViewController.swift */; };
 		26C1B0DD298E39A200142F21 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B0DC298E39A200142F21 /* NutritionViewController.swift */; };
+		B43497A5298EE52100AA505C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B43497A4298EE52100AA505C /* GoogleService-Info.plist */; };
+		B43497A8298EE63600AA505C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B43497A7298EE63600AA505C /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,7 @@
 		26C1B0D8298E397B00142F21 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		26C1B0DA298E398F00142F21 /* FoodScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScannerViewController.swift; sourceTree = "<group>"; };
 		26C1B0DC298E39A200142F21 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
+		B43497A4298EE52100AA505C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43497A8298EE63600AA505C /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +125,7 @@
 				26C1B0A6298E34E200142F21 /* Assets.xcassets */,
 				26C1B0A8298E34E200142F21 /* LaunchScreen.storyboard */,
 				26C1B0AB298E34E200142F21 /* Info.plist */,
+				B43497A4298EE52100AA505C /* GoogleService-Info.plist */,
 			);
 			path = DiabetesNutrition;
 			sourceTree = "<group>";
@@ -185,6 +190,9 @@
 			dependencies = (
 			);
 			name = DiabetesNutrition;
+			packageProductDependencies = (
+				B43497A7298EE63600AA505C /* FirebaseAuth */,
+			);
 			productName = DiabetesNutrition;
 			productReference = 26C1B09A298E34E000142F21 /* DiabetesNutrition.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 26C1B091298E34E000142F21;
+			packageReferences = (
+				B43497A6298EE63600AA505C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 26C1B09B298E34E000142F21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C1B0AA298E34E200142F21 /* LaunchScreen.storyboard in Resources */,
+				B43497A5298EE52100AA505C /* GoogleService-Info.plist in Resources */,
 				26C1B0A7298E34E200142F21 /* Assets.xcassets in Resources */,
 				26C1B0A5298E34E000142F21 /* Main.storyboard in Resources */,
 			);
@@ -650,6 +662,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B43497A6298EE63600AA505C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B43497A7298EE63600AA505C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B43497A6298EE63600AA505C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 26C1B092298E34E000142F21 /* Project object */;
 }
