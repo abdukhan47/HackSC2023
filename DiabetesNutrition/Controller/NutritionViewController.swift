@@ -13,17 +13,21 @@ class NutritionViewController: UIViewController {
     
     
     @IBOutlet weak var lblFoodName : UILabel!
+    @IBOutlet weak var lblCalNum : UILabel!
     
     func showFoodDetails(_ food: Food)
     {
         lblFoodName.text = food.name;
+        lblCalNum.text = String(format: "%.1f", food.cal);
     }
-    var targetFood = Food(name: "Potato",
-                          cal: 30.0,
-                          nDict: ["Protein": 1.0, "Fat":2.0])
-    showFoodDetails(food: self.targetFood)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let targetFood = Food(name: "Potato",
+                              cal: 30.0,
+                              nDict: ["Protein": 1.0, "Fat":2.0])
+        
+        self.showFoodDetails(targetFood)
         
         // Do any additional setup after loading the view.
     }

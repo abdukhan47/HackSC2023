@@ -23,7 +23,7 @@
 		26C1B0DB298E398F00142F21 /* FoodScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B0DA298E398F00142F21 /* FoodScannerViewController.swift */; };
 		26C1B0DD298E39A200142F21 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B0DC298E39A200142F21 /* NutritionViewController.swift */; };
 		B43497A8298EE63600AA505C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B43497A7298EE63600AA505C /* FirebaseAuth */; };
-		B43497AA298EEF3800AA505C /* NutritionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43497A9298EEF3800AA505C /* NutritionUIView.swift */; };
+		B43497AA298EEF3800AA505C /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43497A9298EEF3800AA505C /* BarChart.swift */; };
 		B43497AC298EFFE000AA505C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B43497AB298EFFE000AA505C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +64,7 @@
 		26C1B0D8298E397B00142F21 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		26C1B0DA298E398F00142F21 /* FoodScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScannerViewController.swift; sourceTree = "<group>"; };
 		26C1B0DC298E39A200142F21 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
-		B43497A9298EEF3800AA505C /* NutritionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionUIView.swift; sourceTree = SOURCE_ROOT; };
+		B43497A9298EEF3800AA505C /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = SOURCE_ROOT; };
 		B43497AB298EFFE000AA505C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,7 +161,7 @@
 		26C1B0CE298E361500142F21 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B43497A9298EEF3800AA505C /* NutritionUIView.swift */,
+				B43497A9298EEF3800AA505C /* BarChart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C1B0D9298E397B00142F21 /* LoginViewController.swift in Sources */,
-				B43497AA298EEF3800AA505C /* NutritionUIView.swift in Sources */,
+				B43497AA298EEF3800AA505C /* BarChart.swift in Sources */,
 				26C1B0D7298E396000142F21 /* RegistrationViewController.swift in Sources */,
 				26C1B0A2298E34E000142F21 /* ViewController.swift in Sources */,
 				26C1B0DD298E39A200142F21 /* NutritionViewController.swift in Sources */,
