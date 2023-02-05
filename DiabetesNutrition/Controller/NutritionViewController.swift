@@ -22,14 +22,14 @@ class NutritionViewController: UIViewController{
         targetFood = foodContainer.foodItem
         self.showFoodDetails(targetFood!)
         
-       }
-        // Do any additional setup after loading the view.
-    
 
-@IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
-    targetFood = foodContainer.foodItem
-    return UIHostingController(coder: coder, rootView: BarChart(c : (targetFood?.totalCarbohydrate)!, s : (targetFood?.sugars)!, f : (targetFood?.totalFat)!, p : (targetFood?.protein)!))
-}
+        // Do any additional setup after loading the view.
+    }
+    
+    @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
+        targetFood = foodContainer.foodItem
+        return UIHostingController(coder: coder, rootView: BarChart(c : (targetFood?.totalCarbohydrate)!, s : (targetFood?.sugars)!, f : (targetFood?.totalFat)!, p : (targetFood?.protein)!))
+   }
     @IBOutlet weak var lblFoodName : UILabel!
     @IBOutlet weak var lblCalNum : UILabel!
     
@@ -57,7 +57,3 @@ class NutritionViewController: UIViewController{
     */
 
 }
-
-
-
-

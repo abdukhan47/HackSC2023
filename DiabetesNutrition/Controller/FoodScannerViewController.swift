@@ -2,9 +2,8 @@ import UIKit
 import VisionKit
 
 final class FoodScannerViewController: UIViewController {
-    
-    let foodContainer = FoodContainer.shared
     var timer = Timer()
+    let foodContainer = FoodContainer.shared
     
     private let dataScannerViewController = DataScannerViewController(recognizedDataTypes: [.barcode()],
                                                                       qualityLevel: .fast,
@@ -21,81 +20,83 @@ final class FoodScannerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataScannerViewController.delegate = self // Mark 5
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(checkObject), userInfo: nil, repeats: true)
-
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(checkObject), userInfo: nil, repeats: true)
+        
     }
+    
     @objc func checkObject() {
-        if foodContainer.foodItem != nil {
+        if  foodContainer.foodItem != nil {
             // Object is not nil, stop the timer and transition to another ViewController
             timer.invalidate()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "NutritionSummary")
-            vc.modalPresentationStyle = .overFullScreen
+            vc.modalPresentationStyle = .popover
             present(vc, animated: true)
         }
     }
         
-    @IBAction func openCameraButton(_ sender: Any) {
-        if isScannerAvailable { // Mark 2
-            present(dataScannerViewController, animated: true) // Mark 4
-            try? dataScannerViewController.startScanning() // Mark 4
-        }
-    }
-    
-}
-
-extension FoodScannerViewController: DataScannerViewControllerDelegate { // Mark 5
-    func dataScanner(_ dataScanner: DataScannerViewController, didAdd addedItems: [RecognizedItem], allItems: [RecognizedItem]) { // Mark 5
-        for item in addedItems {
-            switch item {
-                
-                //process(data: text.transcript)
-            case .barcode(let barcode):
-                let upc = barcode.payloadStringValue!
-                process(data: upc)
-                print(barcode.payloadStringValue!)
-                
-                break
-            case .text(_):
-                break
-            @unknown default:
-                print("Should not happen")
+        
+        @IBAction func openCameraButton(_ sender: Any) {
+            if isScannerAvailable { // Mark 2
+                present(dataScannerViewController, animated: true) // Mark 4
+                try? dataScannerViewController.startScanning() // Mark 4
             }
         }
+        
     }
     
-    private func process(data: String) { // Mark 6
-        let appId = "64cdd41d"
-        let appKey = "1d0c99fb0f92354b0fc639dd322f220c"
-        let upc = data
-        
-        let urlString = "https://api.nutritionix.com/v1_1/item?upc=\(upc)&appId=\(appId)&appKey=\(appKey)"
-        
-        if let url = URL(string: urlString) {
-            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    print("Error: \(error)")
+    
+    extension FoodScannerViewController: DataScannerViewControllerDelegate { // Mark 5
+        func dataScanner(_ dataScanner: DataScannerViewController, didAdd addedItems: [RecognizedItem], allItems: [RecognizedItem]) { // Mark 5
+            for item in addedItems {
+                switch item {
+                    
+                    //process(data: text.transcript)
+                case .barcode(let barcode):
+                    let upc = barcode.payloadStringValue!
+                    process(data: upc)
+                    print(barcode.payloadStringValue!)
+                    
+                    break
+                case .text(_):
+                    break
+                @unknown default:
+                    print("Should not happen")
                 }
-                else if let data = data, let response = response as? HTTPURLResponse {
-                    if response.statusCode == 200 {
-                        // success, parse the response data here
-                        do {
-
-                            let nutritionInfo = try JSONDecoder().decode(Food.self, from: data)
-                            
-                            self.foodContainer.foodItem = nutritionInfo
-                            print(self.foodContainer.foodItem?.itemName!)
-                            print(nutritionInfo)
-                        } catch {
-                            print("Error: \(error)")
+            }
+        }
+        
+        private func process(data: String) { // Mark 6
+            let appId = "64cdd41d"
+            let appKey = "1d0c99fb0f92354b0fc639dd322f220c"
+            let upc = data
+            
+            let urlString = "https://api.nutritionix.com/v1_1/item?upc=\(upc)&appId=\(appId)&appKey=\(appKey)"
+            
+            if let url = URL(string: urlString) {
+                let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    if let error = error {
+                        print("Error: \(error)")
+                    } else if let data = data, let response = response as? HTTPURLResponse {
+                        if response.statusCode == 200 {
+                            // success, parse the response data here
+                            do {
+                                
+                                let nutritionInfo = try JSONDecoder().decode(Food.self, from: data)
+                                self.foodContainer.foodItem = nutritionInfo
+                                print(nutritionInfo)
+                                print(nutritionInfo)
+                            } catch {
+                                print("Error: \(error)")
+                            }
+                        } else {
+                            print("Failure: \(response.statusCode)")
                         }
-                    } else {
-                        print("Failure: \(response.statusCode)")
                     }
                 }
+                task.resume()
             }
-            task.resume()
+            dismiss(animated: true, completion: nil)
         }
-        dismiss(animated: true, completion: nil)
     }
-}
+
