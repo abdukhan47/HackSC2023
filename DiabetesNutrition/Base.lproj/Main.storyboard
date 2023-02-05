@@ -347,6 +347,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zN-kA-wJl">
+                                <rect key="frame" x="-38" y="-37" width="505" height="958"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="closeKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k54-1r-jxU"/>
+                                    <action selector="closeKeyboards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJ9-wp-DGx"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQ1-UU-Epa">
                                 <rect key="frame" x="84" y="408" width="246" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -391,16 +401,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V5I-cm-JHF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zN-kA-wJl">
-                                <rect key="frame" x="-38" y="-37" width="505" height="958"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <action selector="closeKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k54-1r-jxU"/>
-                                    <action selector="closeKeyboards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJ9-wp-DGx"/>
                                 </connections>
                             </button>
                         </subviews>
