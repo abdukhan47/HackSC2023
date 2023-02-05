@@ -34,7 +34,7 @@ class NutritionViewController: UIViewController{
     func showFoodDetails(_ food: Food)
     {
         lblFoodName.text = food.itemName;
-        lblCalNum.text = String(format: "%.1f", food.calories!);
+        lblCalNum.text = String(food.calories!);
         
         
     }

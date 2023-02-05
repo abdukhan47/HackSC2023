@@ -11,7 +11,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="fSH-0A-uXd">
             <objects>
-                <tabBarController id="oTt-tI-f4n" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="barController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oTt-tI-f4n" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="TYi-KV-Gff"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Yt-8u-rmW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -138,7 +138,7 @@
         <!--Nutrition-->
         <scene sceneID="x5q-Sg-g5d">
             <objects>
-                <viewController title="Nutrition" id="cb5-fG-zlR" customClass="NutritionViewController" customModule="DiabetesNutrition" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NutritionSummary" title="Nutrition" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cb5-fG-zlR" customClass="NutritionViewController" customModule="DiabetesNutrition" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IfQ-ve-xjA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="2525" y="-196"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="gp0-bS-2ZF">
             <objects>
-                <viewController id="cdn-Vj-Fsq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cdn-Vj-Fsq" customClass="RegistrationViewController" customModule="DiabetesNutrition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cwq-bM-W3B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,19 +229,44 @@
                                     <segue destination="oTt-tI-f4n" kind="show" id="Dnv-wj-sHH"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-yd-3z5">
+                                <rect key="frame" x="84" y="422" width="246" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8m-Ur-Okz">
+                                <rect key="frame" x="84" y="464" width="246" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQw-uY-RR6">
+                                <rect key="frame" x="146" y="534" width="121" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="REGISTER"/>
+                                <connections>
+                                    <action selector="registerPress:" destination="cdn-Vj-Fsq" eventType="touchUpInside" id="gOC-ao-1BV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3UX-3e-PUw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="X8m-Ur-Okz" id="Xhy-li-JTI"/>
+                        <outlet property="userTextField" destination="VbQ-yd-3z5" id="AlO-nI-ovu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPw-YR-KD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1132.06106870229" y="775.35211267605632"/>
+            <point key="canvasLocation" x="-1133.3333333333335" y="774.77678571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiabetesNutrition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="DiabetesNutrition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,19 +296,53 @@
                                     <segue destination="cdn-Vj-Fsq" kind="presentation" id="6eq-fi-biD"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQ1-UU-Epa">
+                                <rect key="frame" x="84" y="378" width="246" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0m-xb-LiS">
+                                <rect key="frame" x="171" y="546" width="74" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LOGIN"/>
+                                <connections>
+                                    <action selector="loginPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V5I-cm-JHF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6S-vU-2h1">
+                                <rect key="frame" x="93" y="589" width="230" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="REGISTER NEW ACCOUNT"/>
+                                <connections>
+                                    <action selector="registerPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qYf-iT-1cW"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kqI-rW-LXI">
+                                <rect key="frame" x="84" y="431" width="246" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fI5-T8-hAh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="kqI-rW-LXI" id="35O-Bz-6u6"/>
+                        <outlet property="userTextField" destination="TQ1-UU-Epa" id="Jl2-m9-VNR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1132.06106870229" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="-1133.3333333333335" y="-35.491071428571423"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eld-JL-7jE"/>
-        <segue reference="Hwg-Zb-5W7"/>
+        <segue reference="96h-ZK-qAz"/>
+        <segue reference="Dnv-wj-sHH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

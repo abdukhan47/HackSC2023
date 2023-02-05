@@ -4,6 +4,7 @@ import VisionKit
 final class FoodScannerViewController: UIViewController {
     
     let foodContainer = FoodContainer.shared
+    var timer = Timer()
     
     private let dataScannerViewController = DataScannerViewController(recognizedDataTypes: [.barcode()],
                                                                       qualityLevel: .fast,
@@ -20,13 +21,20 @@ final class FoodScannerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataScannerViewController.delegate = self // Mark 5
-        
-//        if isScannerAvailable { // Mark 2
-//            present(dataScannerViewController, animated: true) // Mark 4
-//            try? dataScannerViewController.startScanning() // Mark 4
-//        }
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(checkObject), userInfo: nil, repeats: true)
+
     }
-    
+    @objc func checkObject() {
+        if foodContainer.foodItem != nil {
+            // Object is not nil, stop the timer and transition to another ViewController
+            timer.invalidate()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "NutritionSummary")
+            vc.modalPresentationStyle = .overFullScreen
+            present(vc, animated: true)
+        }
+    }
+        
     @IBAction func openCameraButton(_ sender: Any) {
         if isScannerAvailable { // Mark 2
             present(dataScannerViewController, animated: true) // Mark 4
@@ -57,8 +65,8 @@ extension FoodScannerViewController: DataScannerViewControllerDelegate { // Mark
     }
     
     private func process(data: String) { // Mark 6
-        let appId = "5f213012"
-        let appKey = "34c873ef96c3708a11b160d10228b1c4"
+        let appId = "64cdd41d"
+        let appKey = "1d0c99fb0f92354b0fc639dd322f220c"
         let upc = data
         
         let urlString = "https://api.nutritionix.com/v1_1/item?upc=\(upc)&appId=\(appId)&appKey=\(appKey)"
@@ -67,14 +75,16 @@ extension FoodScannerViewController: DataScannerViewControllerDelegate { // Mark
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let error = error {
                     print("Error: \(error)")
-                } else if let data = data, let response = response as? HTTPURLResponse {
+                }
+                else if let data = data, let response = response as? HTTPURLResponse {
                     if response.statusCode == 200 {
                         // success, parse the response data here
                         do {
 
                             let nutritionInfo = try JSONDecoder().decode(Food.self, from: data)
+                            
                             self.foodContainer.foodItem = nutritionInfo
-                            print(self.foodContainer.foodItem?.itemName)
+                            print(self.foodContainer.foodItem?.itemName!)
                             print(nutritionInfo)
                         } catch {
                             print("Error: \(error)")
