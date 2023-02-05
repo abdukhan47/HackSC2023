@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		265D1697298F577300F55654 /* FoodContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D1696298F577300F55654 /* FoodContainer.swift */; };
+		265D1699298F9A0700F55654 /* favorites.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 265D1698298F997600F55654 /* favorites.geojson */; };
 		26C1B09E298E34E000142F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B09D298E34E000142F21 /* AppDelegate.swift */; };
 		26C1B0A0298E34E000142F21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B09F298E34E000142F21 /* SceneDelegate.swift */; };
 		26C1B0A2298E34E000142F21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B0A1298E34E000142F21 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		265D1696298F577300F55654 /* FoodContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodContainer.swift; sourceTree = "<group>"; };
+		265D1698298F997600F55654 /* favorites.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = favorites.geojson; sourceTree = "<group>"; };
 		26C1B09A298E34E000142F21 /* DiabetesNutrition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiabetesNutrition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C1B09D298E34E000142F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26C1B09F298E34E000142F21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				26C1B0A6298E34E200142F21 /* Assets.xcassets */,
 				26C1B0A8298E34E200142F21 /* LaunchScreen.storyboard */,
 				26C1B0AB298E34E200142F21 /* Info.plist */,
+				265D1698298F997600F55654 /* favorites.geojson */,
 			);
 			path = DiabetesNutrition;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C1B0AA298E34E200142F21 /* LaunchScreen.storyboard in Resources */,
+				265D1699298F9A0700F55654 /* favorites.geojson in Resources */,
 				B43497AC298EFFE000AA505C /* GoogleService-Info.plist in Resources */,
 				26C1B0A7298E34E200142F21 /* Assets.xcassets in Resources */,
 				26C1B0A5298E34E000142F21 /* Main.storyboard in Resources */,

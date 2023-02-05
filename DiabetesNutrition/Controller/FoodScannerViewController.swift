@@ -4,7 +4,7 @@ import VisionKit
 final class FoodScannerViewController: UIViewController {
     var timer = Timer()
     let foodContainer = FoodContainer.shared
-    
+    let sharedFoods = RecommendedFoods.sharedFoods
     private let dataScannerViewController = DataScannerViewController(recognizedDataTypes: [.barcode()],
                                                                       qualityLevel: .fast,
                                                                       recognizesMultipleItems: false,
@@ -84,6 +84,7 @@ final class FoodScannerViewController: UIViewController {
                                 
                                 let nutritionInfo = try JSONDecoder().decode(Food.self, from: data)
                                 self.foodContainer.foodItem = nutritionInfo
+                                self.sharedFoods.addFood(food: nutritionInfo)
                                 print(nutritionInfo)
                                 print(nutritionInfo)
                             } catch {
