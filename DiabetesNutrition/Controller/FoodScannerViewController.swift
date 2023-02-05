@@ -77,8 +77,8 @@ final class FoodScannerViewController: UIViewController {
         }
         
         private func process(data: String) { // Mark 6
-            let appId = "75e74dec"
-            let appKey = "89492917a13ed51ce5db0170260ba78b"
+            let appId = "YOUR APP ID"
+            let appKey = "YOUR API KEY"
             let upc = data
             
             let urlString = "https://api.nutritionix.com/v1_1/item?upc=\(upc)&appId=\(appId)&appKey=\(appKey)"
