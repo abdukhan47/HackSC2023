@@ -11,15 +11,38 @@ import FirebaseAuth
 
 class RegistrationViewController: UIViewController {
 
+    @IBOutlet weak var registerButton: UIButton!
+    struct DefaultsKeys {
+        static let weight = "140"
+        static let gender = "male"
+        static let age = "18"
+    }
+    
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        registerButton.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
+        let defaults = UserDefaults.standard
+        defaults.set("Some String Value", forKey: DefaultsKeys.weight)
+        defaults.set("Another String Value", forKey: DefaultsKeys.gender)
+        
+        //let defaults = UserDefaults.standard
+        if let stringOne = defaults.string(forKey: DefaultsKeys.weight) {
+            print(stringOne) // Some String Value
+        }
+        if let stringTwo = defaults.string(forKey: DefaultsKeys.gender) {
+            print(stringTwo) // Another String Value
+        }
     }
     
+    @IBAction func closeKeyboards(_ sender: Any) {
+        userTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
     @IBAction func registerPress(_ sender: Any) {
         guard userTextField.text?.isEmpty == false, passwordTextField.text?.isEmpty == false else {
           print("Empty field!")

@@ -66,7 +66,7 @@
 		26C1B0D8298E397B00142F21 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		26C1B0DA298E398F00142F21 /* FoodScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScannerViewController.swift; sourceTree = "<group>"; };
 		26C1B0DC298E39A200142F21 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
-		B43497A9298EEF3800AA505C /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = SOURCE_ROOT; };
+		B43497A9298EEF3800AA505C /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarChart.swift; path = DiabetesNutrition/BarChart.swift; sourceTree = SOURCE_ROOT; };
 		B43497AB298EFFE000AA505C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +119,7 @@
 		26C1B09C298E34E000142F21 /* DiabetesNutrition */ = {
 			isa = PBXGroup;
 			children = (
+				B43497A9298EEF3800AA505C /* BarChart.swift */,
 				26C1B0CF298E362500142F21 /* Controller */,
 				26C1B0CE298E361500142F21 /* Views */,
 				26C1B0CD298E360D00142F21 /* Models */,
@@ -164,7 +165,6 @@
 		26C1B0CE298E361500142F21 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B43497A9298EEF3800AA505C /* BarChart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
