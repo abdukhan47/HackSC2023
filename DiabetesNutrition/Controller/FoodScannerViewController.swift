@@ -3,6 +3,8 @@ import VisionKit
 
 final class FoodScannerViewController: UIViewController {
     
+    let foodContainer = FoodContainer.shared
+    
     private let dataScannerViewController = DataScannerViewController(recognizedDataTypes: [.barcode()],
                                                                       qualityLevel: .fast,
                                                                       recognizesMultipleItems: false,
@@ -71,7 +73,8 @@ extension FoodScannerViewController: DataScannerViewControllerDelegate { // Mark
                         do {
 
                             let nutritionInfo = try JSONDecoder().decode(Food.self, from: data)
-                                print(nutritionInfo)
+                            self.foodContainer.foodItem = nutritionInfo
+                            print(self.foodContainer.foodItem?.itemName)
                             print(nutritionInfo)
                         } catch {
                             print("Error: \(error)")
@@ -83,5 +86,6 @@ extension FoodScannerViewController: DataScannerViewControllerDelegate { // Mark
             }
             task.resume()
         }
+        dismiss(animated: true, completion: nil)
     }
 }

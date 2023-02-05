@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		265D1692298F2C0400F55654 /* MathObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D1691298F2C0400F55654 /* MathObject.swift */; };
+		265D1697298F577300F55654 /* FoodContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D1696298F577300F55654 /* FoodContainer.swift */; };
 		26C1B09E298E34E000142F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B09D298E34E000142F21 /* AppDelegate.swift */; };
 		26C1B0A0298E34E000142F21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B09F298E34E000142F21 /* SceneDelegate.swift */; };
 		26C1B0A2298E34E000142F21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B0A1298E34E000142F21 /* ViewController.swift */; };
@@ -46,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		265D1691298F2C0400F55654 /* MathObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathObject.swift; sourceTree = "<group>"; };
+		265D1696298F577300F55654 /* FoodContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodContainer.swift; sourceTree = "<group>"; };
 		26C1B09A298E34E000142F21 /* DiabetesNutrition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiabetesNutrition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C1B09D298E34E000142F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26C1B09F298E34E000142F21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 			children = (
 				26C1B0D0298E38EE00142F21 /* Food.swift */,
 				26C1B0D2298E390300142F21 /* RecommendedFoods.swift */,
-				265D1691298F2C0400F55654 /* MathObject.swift */,
+				265D1696298F577300F55654 /* FoodContainer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 				B43497AA298EEF3800AA505C /* BarChart.swift in Sources */,
 				26C1B0D7298E396000142F21 /* RegistrationViewController.swift in Sources */,
 				26C1B0A2298E34E000142F21 /* ViewController.swift in Sources */,
-				265D1692298F2C0400F55654 /* MathObject.swift in Sources */,
+				265D1697298F577300F55654 /* FoodContainer.swift in Sources */,
 				26C1B0DD298E39A200142F21 /* NutritionViewController.swift in Sources */,
 				26C1B0DB298E398F00142F21 /* FoodScannerViewController.swift in Sources */,
 				26C1B0D1298E38EE00142F21 /* Food.swift in Sources */,

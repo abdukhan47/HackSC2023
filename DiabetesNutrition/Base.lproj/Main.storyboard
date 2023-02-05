@@ -52,6 +52,15 @@
                                     <segue destination="cb5-fG-zlR" kind="presentation" id="96h-ZK-qAz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyV-gn-ZnZ">
+                                <rect key="frame" x="125" y="573" width="152" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SEE FOOD INFO "/>
+                                <connections>
+                                    <segue destination="cb5-fG-zlR" kind="show" id="eld-JL-7jE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uJS-0Y-oWq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -178,6 +187,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="aSh-gl-CIj"/>
+                    <navigationItem key="navigationItem" id="P0u-8W-1Uk"/>
                     <connections>
                         <outlet property="lblCalNum" destination="r8o-fj-iWV" id="Bbj-RA-yYE"/>
                         <outlet property="lblFoodName" destination="hMS-EQ-DE9" id="gn0-qW-7f0"/>
@@ -272,6 +282,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="eld-JL-7jE"/>
         <segue reference="Hwg-Zb-5W7"/>
     </inferredMetricsTieBreakers>
     <resources>

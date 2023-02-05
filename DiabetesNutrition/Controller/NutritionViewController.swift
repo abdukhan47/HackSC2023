@@ -13,14 +13,14 @@ import SwiftUI
 
 
 class NutritionViewController: UIViewController{
-    let targetFood = Food(name: "Potato",
-                          cal: 30.0,
-                          nDict: ["Protein": 1.0, "Fat":2.0])
+    let foodContainer = FoodContainer.shared
+    var targetFood : Food?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        self.showFoodDetails(targetFood)
+        targetFood = foodContainer.foodItem
+        self.showFoodDetails(targetFood!)
         
         // Do any additional setup after loading the view.
     }
@@ -28,13 +28,13 @@ class NutritionViewController: UIViewController{
     @IBOutlet weak var lblCalNum : UILabel!
     
     
-    @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: BarChart(nd : targetFood.nDict))
-    }
+//    @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
+//        return UIHostingController(coder: coder, rootView: BarChart(nd : targetFood.nDict))
+//    }
     func showFoodDetails(_ food: Food)
     {
-        lblFoodName.text = food.name;
-        lblCalNum.text = String(format: "%.1f", food.cal);
+        lblFoodName.text = food.itemName;
+        lblCalNum.text = String(format: "%.1f", food.calories!);
         
         
     }
