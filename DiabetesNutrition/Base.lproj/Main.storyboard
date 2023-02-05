@@ -187,7 +187,7 @@
                                 <color key="backgroundColor" name="Color 1"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7d-qc-2FC">
-                                <rect key="frame" x="33" y="402" width="348" height="381"/>
+                                <rect key="frame" x="32" y="401" width="349" height="381"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="zNe-tR-Tcb" kind="embed" destinationCreationSelector="embedSwiftUIView:" id="d85-NC-Ai0"/>
@@ -232,6 +232,15 @@
                                 <rect key="frame" x="-90" y="-530" width="551" height="1071"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiL-n5-bF4">
+                                        <rect key="frame" x="21" y="47" width="530" height="1080"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="closeKeyboards:" destination="cdn-Vj-Fsq" eventType="touchUpInside" id="Vrm-eh-sXN"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT0-Vw-Zc6">
                                         <rect key="frame" x="164" y="662" width="255" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -318,9 +327,12 @@
                         <color key="backgroundColor" name="Primary"/>
                     </view>
                     <connections>
+                        <outlet property="ageField" destination="Y4c-u1-sZ2" id="pMW-qq-Cqz"/>
+                        <outlet property="genderField" destination="eZY-6M-n8c" id="piB-66-o1v"/>
                         <outlet property="passwordTextField" destination="X8m-Ur-Okz" id="Xhy-li-JTI"/>
                         <outlet property="registerButton" destination="QQw-uY-RR6" id="WTk-Qb-lSa"/>
                         <outlet property="userTextField" destination="VbQ-yd-3z5" id="AlO-nI-ovu"/>
+                        <outlet property="weightField" destination="zM7-AT-411" id="UPC-19-2bk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPw-YR-KD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -379,6 +391,16 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V5I-cm-JHF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zN-kA-wJl">
+                                <rect key="frame" x="-38" y="-37" width="505" height="958"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="closeKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k54-1r-jxU"/>
+                                    <action selector="closeKeyboards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJ9-wp-DGx"/>
                                 </connections>
                             </button>
                         </subviews>

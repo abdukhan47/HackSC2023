@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    @IBAction func closeKeyboards(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
