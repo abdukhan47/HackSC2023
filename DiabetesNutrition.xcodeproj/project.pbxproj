@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		265D1697298F577300F55654 /* FoodContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D1696298F577300F55654 /* FoodContainer.swift */; };
-		265D1699298F9A0700F55654 /* favorites.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 265D1698298F997600F55654 /* favorites.geojson */; };
+		265D169B298FA8BA00F55654 /* RecomendedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D169A298FA8BA00F55654 /* RecomendedTableViewController.swift */; };
 		26C1B09E298E34E000142F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B09D298E34E000142F21 /* AppDelegate.swift */; };
 		26C1B0A0298E34E000142F21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B09F298E34E000142F21 /* SceneDelegate.swift */; };
 		26C1B0A2298E34E000142F21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1B0A1298E34E000142F21 /* ViewController.swift */; };
@@ -48,7 +48,7 @@
 
 /* Begin PBXFileReference section */
 		265D1696298F577300F55654 /* FoodContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodContainer.swift; sourceTree = "<group>"; };
-		265D1698298F997600F55654 /* favorites.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = favorites.geojson; sourceTree = "<group>"; };
+		265D169A298FA8BA00F55654 /* RecomendedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendedTableViewController.swift; sourceTree = "<group>"; };
 		26C1B09A298E34E000142F21 /* DiabetesNutrition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiabetesNutrition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C1B09D298E34E000142F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26C1B09F298E34E000142F21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,7 +133,6 @@
 				26C1B0A6298E34E200142F21 /* Assets.xcassets */,
 				26C1B0A8298E34E200142F21 /* LaunchScreen.storyboard */,
 				26C1B0AB298E34E200142F21 /* Info.plist */,
-				265D1698298F997600F55654 /* favorites.geojson */,
 			);
 			path = DiabetesNutrition;
 			sourceTree = "<group>";
@@ -179,6 +178,7 @@
 				26C1B0D8298E397B00142F21 /* LoginViewController.swift */,
 				26C1B0DA298E398F00142F21 /* FoodScannerViewController.swift */,
 				26C1B0DC298E39A200142F21 /* NutritionViewController.swift */,
+				265D169A298FA8BA00F55654 /* RecomendedTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,7 +294,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C1B0AA298E34E200142F21 /* LaunchScreen.storyboard in Resources */,
-				265D1699298F9A0700F55654 /* favorites.geojson in Resources */,
 				B43497AC298EFFE000AA505C /* GoogleService-Info.plist in Resources */,
 				26C1B0A7298E34E200142F21 /* Assets.xcassets in Resources */,
 				26C1B0A5298E34E000142F21 /* Main.storyboard in Resources */,
@@ -333,6 +332,7 @@
 				26C1B09E298E34E000142F21 /* AppDelegate.swift in Sources */,
 				26C1B0D3298E390300142F21 /* RecommendedFoods.swift in Sources */,
 				26C1B0A0298E34E000142F21 /* SceneDelegate.swift in Sources */,
+				265D169B298FA8BA00F55654 /* RecomendedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +512,7 @@
 				DEVELOPMENT_TEAM = K8682V33T4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DiabetesNutrition/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Snack Scan";
 				INFOPLIST_KEY_NSCameraUsageDescription = "GIVE ME CAMERA";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -542,6 +543,7 @@
 				DEVELOPMENT_TEAM = K8682V33T4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DiabetesNutrition/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Snack Scan";
 				INFOPLIST_KEY_NSCameraUsageDescription = "GIVE ME CAMERA";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

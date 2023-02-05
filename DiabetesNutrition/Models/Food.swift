@@ -1,19 +1,19 @@
 import Foundation
 
 class Food: Codable {
-    let itemName: String?
-    let brandName: String?
-    let itemDescription: String?
-    let calories: Int?
-    let caloriesFromFat: Int?
-    let totalFat: Float?
-    let saturatedFat: Float?
-    let totalCarbohydrate: Float?
-    let sugars: Float?
-    let protein: Float?
-    let servingsPerContainer: Float?
-    let servingSizeQty: Float?
-    let servingSizeUnit: String?
+    var itemName: String?
+    var brandName: String?
+    var itemDescription: String?
+    var calories: Int?
+    var caloriesFromFat: Int?
+    var totalFat: Float?
+    var saturatedFat: Float?
+    var totalCarbohydrate: Float?
+    var sugars: Float?
+    var protein: Float?
+    var servingsPerContainer: Float?
+    var servingSizeQty: Float?
+    var servingSizeUnit: String?
 
     enum CodingKeys: String, CodingKey {
         case itemName = "item_name"

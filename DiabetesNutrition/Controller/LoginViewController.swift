@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
     @IBAction func registerPress(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "signUp")
-        vc.modalPresentationStyle = .overFullScreen
+        vc.modalPresentationStyle = .popover
         present(vc, animated: true)
     }
     

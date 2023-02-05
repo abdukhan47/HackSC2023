@@ -49,7 +49,7 @@ class RegistrationViewController: UIViewController {
         passwordTextField.resignFirstResponder()
         ageField.resignFirstResponder()
         genderField.resignFirstResponder()
-        
+        weightField.resignFirstResponder()
         
     }
     

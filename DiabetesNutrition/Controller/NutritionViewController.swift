@@ -12,10 +12,12 @@ import SwiftUI
 //var child = UIHostingController(rootView: BarChart());
 
 
-class NutritionViewController: UIViewController{
+class NutritionViewController: UIViewController, UIPopoverPresentationControllerDelegate{
     let foodContainer = FoodContainer.shared
     var targetFood : Food?
-
+//    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+//        foodContainer.foodItem = nil
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +28,13 @@ class NutritionViewController: UIViewController{
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet var buttonLabel: UIButton!
+    
+    @IBAction func heartPressed(_ sender: Any) {
+        buttonLabel.setTitleColor(UIColor.red, for: .normal)
+    }
+    
+    
     @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
         targetFood = foodContainer.foodItem
         return UIHostingController(coder: coder, rootView: BarChart(c : (targetFood?.totalCarbohydrate)!, s : (targetFood?.sugars)!, f : (targetFood?.totalFat)!, p : (targetFood?.protein)!))
@@ -33,12 +42,14 @@ class NutritionViewController: UIViewController{
     @IBOutlet weak var lblFoodName : UILabel!
     @IBOutlet weak var lblCalNum : UILabel!
     
+    @IBOutlet var servingSize: UILabel!
     
     
     func showFoodDetails(_ food: Food)
     {
         lblFoodName.text = food.itemName;
         lblCalNum.text = String(food.calories!);
+        servingSize.text = "\(food.servingSizeQty!) \( food.servingSizeUnit!)"
         
         
     }
