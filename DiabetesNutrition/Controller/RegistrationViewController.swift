@@ -21,6 +21,11 @@ class RegistrationViewController: UIViewController {
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    @IBOutlet weak var ageField: UITextField!
+    
+    @IBOutlet weak var weightField: UITextField!
+    
+    @IBOutlet weak var genderField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +47,14 @@ class RegistrationViewController: UIViewController {
     @IBAction func closeKeyboards(_ sender: Any) {
         userTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+        ageField.resignFirstResponder()
+        genderField.resignFirstResponder()
+        
+        
     }
+    
+    
+    
     @IBAction func registerPress(_ sender: Any) {
         guard userTextField.text?.isEmpty == false, passwordTextField.text?.isEmpty == false else {
           print("Empty field!")
