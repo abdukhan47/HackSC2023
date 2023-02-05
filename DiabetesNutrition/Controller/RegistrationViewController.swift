@@ -20,6 +20,10 @@ class RegistrationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func closeKeyboards(_ sender: Any) {
+        userTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
     @IBAction func registerPress(_ sender: Any) {
         guard userTextField.text?.isEmpty == false, passwordTextField.text?.isEmpty == false else {
           print("Empty field!")

@@ -14,32 +14,23 @@ struct BarChart: View
     struct Nutrient : Identifiable
     {
         let type_: String
-        let val: Double
+        let val: Float
         var id = UUID()
     }
-    var nDict_ : [String: Double] = [:]
-    init(nd :  [String: Double])
-    {
-        nDict_ = nd;
-        //nDict_["protein"] = 10.0;
-        //nDict_["fat"] = 20.0;
-        setData()
-        
-        print("a")
-        
-    }
-    
     var data:[Nutrient] = []
     
-    public mutating func setData()
+    init(c : Float, s : Float, f : Float, p: Float)
     {
-        print("b")
-        for (key, value) in nDict_
-        {
-            data.append(Nutrient(type_ : key, val: value))
-            print("c")
-        }
+        data.append(Nutrient(type_:"Carbohydrates", val:c))
+        data.append(Nutrient(type_:"Sugars", val:s))
+        data.append(Nutrient(type_:"Fats", val:f))
+        data.append(Nutrient(type_:"Protein", val:p))
+
     }
+    
+   
+    
+    
     
     
     

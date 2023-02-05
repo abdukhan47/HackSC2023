@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-106" y="-173"/>
         </scene>
-        <!--Item-->
+        <!--Scan-->
         <scene sceneID="dLQ-mI-1Qf">
             <objects>
                 <viewController id="aCB-mT-K01" customClass="FoodScannerViewController" customModule="DiabetesNutrition" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,13 +35,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scanner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iK-Eu-j7a">
-                                <rect key="frame" x="175" y="366" width="63" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeW-j0-mMX">
                                 <rect key="frame" x="99" y="240" width="217" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,20 +45,11 @@
                                     <segue destination="cb5-fG-zlR" kind="presentation" id="96h-ZK-qAz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyV-gn-ZnZ">
-                                <rect key="frame" x="125" y="573" width="152" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SEE FOOD INFO "/>
-                                <connections>
-                                    <segue destination="cb5-fG-zlR" kind="show" id="eld-JL-7jE"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uJS-0Y-oWq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="JgF-Pk-eXZ"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="barcode" catalog="system" id="JgF-Pk-eXZ"/>
                     <navigationItem key="navigationItem" id="xuE-Tk-RKw"/>
                     <connections>
                         <outlet property="openCamera" destination="NeW-j0-mMX" id="vOZ-fv-lu1"/>
@@ -75,11 +59,11 @@
             </objects>
             <point key="canvasLocation" x="1171" y="877"/>
         </scene>
-        <!--Item-->
+        <!--Scan-->
         <scene sceneID="KUZ-vV-B3S">
             <objects>
                 <navigationController id="dHg-MP-eQN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Gqn-Br-4Hr"/>
+                    <tabBarItem key="tabBarItem" title="Scan" selectedImage="barcode" catalog="system" id="Gqn-Br-4Hr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fz5-8O-FnK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -92,11 +76,11 @@
             </objects>
             <point key="canvasLocation" x="276" y="1158"/>
         </scene>
-        <!--Item-->
+        <!--Recommended-->
         <scene sceneID="I8e-gV-wbR">
             <objects>
                 <navigationController id="mAF-4P-Oez" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="N3n-6H-WZw"/>
+                    <tabBarItem key="tabBarItem" title="Recommended" selectedImage="star.fill" catalog="system" id="N3n-6H-WZw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vmu-di-i1e">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -109,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="-426" y="-868"/>
         </scene>
-        <!--Item-->
+        <!--Recommended-->
         <scene sceneID="g2C-GL-gAC">
             <objects>
                 <viewController id="HQs-8N-bpN" sceneMemberID="viewController">
@@ -128,17 +112,17 @@
                         <viewLayoutGuide key="safeArea" id="8qZ-ap-QkN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="BI5-57-Y0u"/>
+                    <tabBarItem key="tabBarItem" title="Recommended" image="star.fill" catalog="system" id="BI5-57-Y0u"/>
                     <navigationItem key="navigationItem" id="83u-Wy-6aj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PED-5h-8WR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="852.67175572519079" y="-699.29577464788736"/>
         </scene>
-        <!--Nutrition-->
+        <!--NutritionSummary-->
         <scene sceneID="x5q-Sg-g5d">
             <objects>
-                <viewController storyboardIdentifier="NutritionSummary" title="Nutrition" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cb5-fG-zlR" customClass="NutritionViewController" customModule="DiabetesNutrition" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NutritionSummary" title="NutritionSummary" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cb5-fG-zlR" customClass="NutritionViewController" customModule="DiabetesNutrition" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IfQ-ve-xjA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +160,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7d-qc-2FC">
-                                <rect key="frame" x="96" y="432" width="240" height="128"/>
+                                <rect key="frame" x="95" y="432" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="zNe-tR-Tcb" kind="embed" destinationCreationSelector="embedSwiftUIView:" id="d85-NC-Ai0"/>
@@ -213,6 +197,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVE-5m-qSG">
+                                <rect key="frame" x="-128" y="-109" width="761" height="1044"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="closeKeyboards:" destination="cdn-Vj-Fsq" eventType="touchUpInside" id="5DF-k3-DWE"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT0-Vw-Zc6">
                                 <rect key="frame" x="129" y="338" width="160" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -230,7 +223,7 @@
                                 <rect key="frame" x="83" y="452" width="246" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQw-uY-RR6">
                                 <rect key="frame" x="121" y="564" width="173" height="24"/>
@@ -265,6 +258,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kND-5V-5hZ">
+                                <rect key="frame" x="-95" y="-19" width="679" height="963"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="closeKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tiy-Hz-hPy"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQ1-UU-Epa">
                                 <rect key="frame" x="84" y="408" width="246" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -324,10 +326,9 @@
             <point key="canvasLocation" x="-1133.3333333333335" y="-35.491071428571423"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="96h-ZK-qAz"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="barcode" catalog="system" width="128" height="94"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
