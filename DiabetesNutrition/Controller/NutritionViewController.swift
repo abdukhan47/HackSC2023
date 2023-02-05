@@ -6,31 +6,39 @@
 //
 
 import UIKit
-import Charts
+import SwiftUI
 
 
-class NutritionViewController: UIViewController {
-    
-    
-    @IBOutlet weak var lblFoodName : UILabel!
-    @IBOutlet weak var lblCalNum : UILabel!
-    
-    func showFoodDetails(_ food: Food)
-    {
-        lblFoodName.text = food.name;
-        lblCalNum.text = String(format: "%.1f", food.cal);
-    }
-    
+//var child = UIHostingController(rootView: BarChart());
+
+
+class NutritionViewController: UIViewController{
+    let targetFood = Food(name: "Potato",
+                          cal: 30.0,
+                          nDict: ["Protein": 1.0, "Fat":2.0])
     override func viewDidLoad() {
         super.viewDidLoad()
-        let targetFood = Food(name: "Potato",
-                              cal: 30.0,
-                              nDict: ["Protein": 1.0, "Fat":2.0])
+        
         
         self.showFoodDetails(targetFood)
         
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var lblFoodName : UILabel!
+    @IBOutlet weak var lblCalNum : UILabel!
+    
+    
+    @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: BarChart(nd : targetFood.nDict))
+    }
+    func showFoodDetails(_ food: Food)
+    {
+        lblFoodName.text = food.name;
+        lblCalNum.text = String(format: "%.1f", food.cal);
+        
+        
+    }
+    
     
     
 
