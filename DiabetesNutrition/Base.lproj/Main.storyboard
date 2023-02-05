@@ -48,6 +48,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Temp Button Registration"/>
                                 <connections>
+                                    <action selector="openCameraButton:" destination="aCB-mT-K01" eventType="touchUpInside" id="JhI-tC-tpt"/>
                                     <segue destination="cb5-fG-zlR" kind="presentation" id="96h-ZK-qAz"/>
                                 </connections>
                             </button>
@@ -57,6 +58,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="JgF-Pk-eXZ"/>
                     <navigationItem key="navigationItem" id="xuE-Tk-RKw"/>
+                    <connections>
+                        <outlet property="openCamera" destination="NeW-j0-mMX" id="vOZ-fv-lu1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZe-84-m9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
